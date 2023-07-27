@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="awakened1712"    fetch="https://github.com/awakened1712"/>
+    <remote name="mtg"             fetch="https://gitlab.com/MindTheGapps"/>
+
+    <remove-project name="LineageOS/android" />
+    <remove-project name="LineageOS/android_frameworks_base" />
+    <remove-project name="LineageOS/android_frameworks_av" />
+    <remove-project name="LineageOS/android_packages_apps_Trebuchet" />
+    <remove-project name="LineageOS/android_packages_apps_Settings" />
+    <remove-project name="LineageOS/android_packages_apps_Backgrounds" />
+    <remove-project name="LineageOS/android_packages_apps_LineageParts" />
+    <remove-project name="LineageOS/android_packages_overlays_Lineage" />
+    <remove-project name="LineageOS/android_vendor_lineage" />
+    <remove-project name="LineageOS/android_lineage-sdk" />
+    <remove-project name="LineageOS/android_system_core" />
+    <remove-project name="LineageOS/android_build" />
+
+    <project name="android"                             path="android"                      remote="awakened1712"   revision="lineage-20" />
+    <project name="android_frameworks_base"             path="frameworks/base"              remote="awakened1712"   revision="lineage-20" />
+    <project name="android_frameworks_av"               path="frameworks/av"                remote="awakened1712"   revision="lineage-20" />
+    <project name="android_packages_apps_Trebuchet"     path="packages/apps/Trebuchet"      remote="awakened1712"   revision="lineage-20" />
+    <project name="android_packages_apps_Settings"      path="packages/apps/Settings"       remote="awakened1712"   revision="lineage-20" />
+    <project name="android_packages_apps_Backgrounds"   path="packages/apps/Backgrounds"    remote="awakened1712"   revision="lineage-20" />
+    <project name="android_packages_apps_LineageParts"  path="packages/apps/LineageParts"   remote="awakened1712"   revision="lineage-20" />
+    <project name="android_packages_overlays_Lineage"   path="packages/overlays/Lineage"    remote="awakened1712"   revision="lineage-20" />
+    <project name="android_vendor_lineage"              path="vendor/lineage"               remote="awakened1712"   revision="lineage-20" />
+    <project name="android_lineage-sdk"                 path="lineage-sdk"                  remote="awakened1712"   revision="lineage-20" />
+    <project name="android_system_core"                 path="system/core"                  remote="awakened1712"   revision="lineage-20" />
+    <project name="android_build"                       path="build/make"                   remote="awakened1712"   revision="lineage-20" >
+        <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+        <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+        <linkfile src="core" dest="build/core" />
+        <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+        <linkfile src="target" dest="build/target" />
+        <linkfile src="tools" dest="build/tools" />
+    </project>
+    <project name="vendor_gapps"                        path="vendor/gapps"                 remote="mtg"            revision="tau" />
+</manifest>
